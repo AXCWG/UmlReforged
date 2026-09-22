@@ -1,0 +1,50 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication1.Views.NbtWindow"
+        xmlns:sty="using:FluentAvalonia.Styling"
+        xmlns:ui="using:FluentAvalonia.UI.Controls"
+        xmlns:uip="using:FluentAvalonia.UI.Controls.Primitives"
+        xmlns:this="using:AvaloniaApplication1.Views"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        xmlns:viewModels="clr-namespace:AvaloniaApplication1.ViewModels"
+        xmlns:nbt="using:fNbt"
+        x:DataType="viewModels:NBTUserControlStaticState">
+    <Design.DataContext>
+        <vm:NBTUserControlStaticState></vm:NBTUserControlStaticState>
+    </Design.DataContext>
+    <Grid RowDefinitions="Auto, *">
+        <ui:FACommandBar DefaultLabelPosition="Right">
+            <StackPanel Orientation="Horizontal">
+                <ui:FACommandBarButton Label="Save" Click="SaveClick"></ui:FACommandBarButton>
+                <ui:FACommandBarButton Label="Load" Click="LoadClick"></ui:FACommandBarButton>
+            </StackPanel>
+        </ui:FACommandBar>
+        <TreeView Grid.Row="1" ItemsSource="{Binding File?.RootTag}"  SelectionChanged="TreeView_OnSelectionChanged" x:Name="TreeView">
+            <TreeView.DataTemplates >
+                <TreeDataTemplate DataType="{x:Type nbt:NbtCompound }" ItemsSource="{Binding . }">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{Binding TagType}"></Label>
+                        <Label Content=" - "></Label>
+                        <Label Content="{Binding Name}"></Label>
+                    </StackPanel>
+                </TreeDataTemplate>
+                <TreeDataTemplate DataType="{x:Type nbt:NbtList }" ItemsSource="{Binding . }">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{Binding TagType}"></Label>
+                        <Label Content=" - "></Label>
+                        <Label Content="{Binding Name}"></Label>
+                    </StackPanel>
+                </TreeDataTemplate>
+                <!-- <DataTemplate DataType="{x:Type nbt:NbtTag}"> -->
+                <!--     <this:NbtTreePresenter NbtTag="{Binding .}"></this:NbtTreePresenter> -->
+                <!-- </DataTemplate> -->
+                <!-- See code behind. -->
+            </TreeView.DataTemplates>
+        </TreeView>
+    </Grid>
+   
+    
+</UserControl>

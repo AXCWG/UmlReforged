@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication1.Views.NbtSetValueDialogue"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        xmlns:viewModels="clr-namespace:AvaloniaApplication1.ViewModels"
+        CanResize="False" Width="200" Height="100"
+        Title="NbtSetValueDialogue"
+       >
+    <StackPanel Spacing="12">
+        <StackPanel Orientation="Horizontal">
+            <Label Content="New name: "></Label>
+            <TextBox MaxLines="1" AcceptsReturn="False" AcceptsTab="False" LineHeight="1" Text="{ReflectionBinding Name}" ></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="New value: "></Label>
+            <TextBox MaxLines="1" AcceptsReturn="False" AcceptsTab="False" LineHeight="1" Text="{ReflectionBinding Value}"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Click="Save">Save</Button>
+            <Button Click="Quit">Cancel</Button>
+        </StackPanel>
+    </StackPanel>
+</Window>

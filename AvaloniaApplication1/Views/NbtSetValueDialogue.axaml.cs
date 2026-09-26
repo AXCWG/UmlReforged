@@ -10,7 +10,12 @@ namespace AvaloniaApplication1.Views;
 
 public partial class NbtSetValueDialogue: Window
 {
-    private NbtTag NbtTag { get; set; }
+    private NbtTag? NbtTag { get; set; }
+
+    public NbtSetValueDialogue()
+    {
+        InitializeComponent();
+    }
     public NbtSetValueDialogue( NbtTag nbtTag)
     {
         NbtTag = nbtTag; 
@@ -71,16 +76,16 @@ public partial class NbtSetValueDialogue: Window
                     Name = nbtTag.Name, Value = ((NbtString)nbtTag).Value
                 };
                 break;
-           
+          
             default:
-                throw new ArgumentOutOfRangeException();
+                throw new ArgumentOutOfRangeException(nbtTag.TagType.ToString());
         }
         
     }
 
     private void Save(object? sender, RoutedEventArgs e)
     {
-        switch (NbtTag.TagType)
+        switch (NbtTag?.TagType)
         {
             case NbtTagType.Unknown:
                 throw new ArgumentOutOfRangeException(nameof(NbtTag));

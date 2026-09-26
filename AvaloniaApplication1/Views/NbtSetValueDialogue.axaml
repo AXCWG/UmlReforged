@@ -6,17 +6,17 @@
         x:Class="AvaloniaApplication1.Views.NbtSetValueDialogue"
         xmlns:vm="using:AvaloniaApplication1.ViewModels"
         xmlns:viewModels="clr-namespace:AvaloniaApplication1.ViewModels"
-        CanResize="False" Width="200" Height="100"
+        CanResize="False" Width="400" Height="200"
         Title="NbtSetValueDialogue"
        >
     <StackPanel Spacing="12">
         <StackPanel Orientation="Horizontal">
             <Label Content="New name: "></Label>
-            <TextBox MaxLines="1" AcceptsReturn="False" AcceptsTab="False" LineHeight="1" Text="{ReflectionBinding Name}" ></TextBox>
+            <TextBox MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  Text="{ReflectionBinding Name}" ></TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <Label Content="New value: "></Label>
-            <TextBox MaxLines="1" AcceptsReturn="False" AcceptsTab="False" LineHeight="1" Text="{ReflectionBinding Value}"></TextBox>
+            <TextBox MaxLines="1" AcceptsReturn="False"  AcceptsTab="False"  Text="{ReflectionBinding Value}"></TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <Button Click="Save">Save</Button>

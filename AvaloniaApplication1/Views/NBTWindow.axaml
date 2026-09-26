@@ -28,14 +28,14 @@
                     <StackPanel Orientation="Horizontal">
                         <Label Content="{Binding TagType}"></Label>
                         <Label Content=" - "></Label>
-                        <Label Content="{Binding Name}"></Label>
+                        <Label Content="{Binding Name, TargetNullValue=UNNAMED_TAG}"></Label>
                     </StackPanel>
                 </TreeDataTemplate>
                 <TreeDataTemplate DataType="{x:Type nbt:NbtList }" ItemsSource="{Binding . }">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="{Binding TagType}"></Label>
                         <Label Content=" - "></Label>
-                        <Label Content="{Binding Name}"></Label>
+                        <Label Content="{Binding Name, TargetNullValue=UNNAMED_TAG}"></Label>
                     </StackPanel>
                 </TreeDataTemplate>
                 <!-- <DataTemplate DataType="{x:Type nbt:NbtTag}"> -->

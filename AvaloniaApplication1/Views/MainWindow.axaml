@@ -19,14 +19,12 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-  <ui:FANavigationView ItemInvoked="FANavigationView_OnItemInvoked" x:Name="FaNavigationView">
+  <ui:FANavigationView ItemInvoked="FANavigationView_OnItemInvoked" x:Name="FaNavigationView" IsBackButtonVisible="True" BackRequested="FaNavigationView_OnBackRequested" IsBackEnabled="False">
       <ui:FANavigationView.MenuItems>
           <ui:FANavigationViewItem Content="Play" Tag="Play" x:Name="Default"></ui:FANavigationViewItem>
           <ui:FANavigationViewItem Content="NBT" Tag="Nbt"></ui:FANavigationViewItem>
       </ui:FANavigationView.MenuItems>
-      <ui:FAFrame x:Name="Frame"  >
-          <this:Play></this:Play>
+      <ui:FAFrame x:Name="Frame" Navigated="Frame_OnNavigated" Navigating="Frame_OnNavigating" >
       </ui:FAFrame>
   </ui:FANavigationView>
-    
 </Window>

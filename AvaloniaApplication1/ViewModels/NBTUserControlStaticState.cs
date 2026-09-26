@@ -11,18 +11,6 @@ public partial class NBTUserControlStaticState : ViewModelBase
     public static NBTUserControlStaticState Instance  => _instance ??= new NBTUserControlStaticState();
     [ObservableProperty] public partial NbtFile? File { get; set; }
     
-    partial void OnFileChanged(NbtFile? value)
-    {
-        Console.WriteLine(File?.ToString());
-    }
-
-    public void FileChanged()
-    {
-        var f = File;
-        File = null;
-        File = f;
-    }
-
     public NBTUserControlStaticState()
     {
         Console.WriteLine("Created. ");

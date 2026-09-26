@@ -4,7 +4,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaApplication1.Views.Play"
-        >
+        Margin="12"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        xmlns:viewModels="clr-namespace:AvaloniaApplication1.ViewModels"
+        x:DataType="viewModels:PlayViewModel">
+    <Design.DataContext><vm:PlayViewModel></vm:PlayViewModel></Design.DataContext>
+    <Grid ColumnDefinitions="2*,6*">
+       <Grid >
+           <StackPanel Spacing="2">
+               <ToggleSwitch OffContent="Offline" OnContent="Online" IsChecked="{Binding IsOnline, Mode=TwoWay}"></ToggleSwitch>
+               <TextBox PlaceholderText="Username" Text="{Binding Username}" AcceptsReturn="False" AcceptsTab="False"></TextBox>  
+               <Button >Start</Button>
+               <Button Click="SelectVersionButtonOnClick">Version Selection</Button>
+               <Button Click="VersionSettingsButtonOnClick">Version Settings</Button>
+           </StackPanel>
+           
+       </Grid>
+        
+       <Grid Grid.Column="1"></Grid>
+   </Grid>
    
-   <GroupBox Header="Main"></GroupBox>
 </UserControl>

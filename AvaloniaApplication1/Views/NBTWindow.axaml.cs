@@ -27,7 +27,8 @@ public partial class NbtWindow : UserControl
             DataContext = new NbtTreePresenterViewModel()
             {
                 NbtTag = s
-            }, Name = s.Name
+            },
+            Name = s.Uuid.ToString()
         }));
     }
 
@@ -62,12 +63,12 @@ public partial class NbtWindow : UserControl
         {
             return; 
         }
-        if (eAddedItem.TagType is not NbtTagType.Compound or NbtTagType.List)
+        if (eAddedItem.TagType != NbtTagType.Compound && eAddedItem.TagType != NbtTagType.List)
         {
             var dialog = new NbtSetValueDialogue(eAddedItem);
             await dialog.ShowDialog((Window)TopLevel.GetTopLevel(this)!);
             ((NbtTreePresenterViewModel)((NbtTreePresenter)TreeView.FindDescendantOfType<NbtTreePresenter>(false,
-                o => o.Name == eAddedItem.Name)).DataContext).Update();
+                o => o.Name == eAddedItem.Uuid.ToString())).DataContext).Update();
 
         }
     }

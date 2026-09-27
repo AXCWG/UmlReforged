@@ -13,7 +13,10 @@
        <Grid >
            <StackPanel Spacing="2">
                <ToggleSwitch OffContent="Offline" OnContent="Online" IsChecked="{Binding IsOnline, Mode=TwoWay}"></ToggleSwitch>
-               <TextBox PlaceholderText="Username" Text="{Binding Username}" AcceptsReturn="False" AcceptsTab="False"></TextBox>  
+               <ComboBox PlaceholderText="Username" 
+                         ItemsSource="{Binding Username.Usernames, Mode=TwoWay}"
+                         SelectedIndex="{Binding Username.Index, Mode=TwoWay}"
+                         KeyDown="InputElement_OnKeyDown" IsEditable="True"></ComboBox>  
                <Button >Start</Button>
                <Button Click="SelectVersionButtonOnClick">Version Selection</Button>
                <Button Click="VersionSettingsButtonOnClick">Version Settings</Button>

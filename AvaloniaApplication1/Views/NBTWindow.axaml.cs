@@ -12,6 +12,7 @@ using Avalonia.VisualTree;
 using AvaloniaApplication1.ViewModels;
 using AXExpansion;
 using fNbt;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AvaloniaApplication1.Views;
 
@@ -22,12 +23,12 @@ public partial class NbtWindow : UserControl
         InitializeComponent();
         DataContext = NBTUserControlStaticState.Instance;
         Console.WriteLine("Created NBTWindow");
-        TreeView.DataTemplates.Add(new FuncDataTemplate<NbtTag>( (s, e) => new NbtTreePresenter()
+        TreeView.DataTemplates.Add(new FuncDataTemplate<NbtTag>( (s, e) => new NbtTreePresenter
         {
-            DataContext = new NbtTreePresenterViewModel()
+            DataContext = ((App?)Application.Current)?.Services?.GetRequiredService<NbtTreePresenterViewModel>().With(i=>
             {
-                NbtTag = s
-            },
+                i?.NbtTag = s;
+            }),
             Name = s.Uuid.ToString()
         }));
     }

@@ -15,7 +15,9 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c3f62fb-4fca-40e3-b72f-c8d10c51743c" name="更改" comment="" />
+    <list default="true" id="3c3f62fb-4fca-40e3-b72f-c8d10c51743c" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UmlForReal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UmlForReal/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,38 +29,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "AXCWG"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AXCWG&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AXCWG/UmlReforged.git",
-    "accountId": "e84e3be0-551b-4927-8c5e-ec2f838c449d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AXCWG/UmlReforged.git&quot;,
+    &quot;accountId&quot;: &quot;e84e3be0-551b-4927-8c5e-ec2f838c449d&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1db0e733fad04627b12426d3d461b5011e00/56/5186efcf/PhotinoServer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/267574cbd40a48fea0f0aaab52827f5b5550/38/b2524017/IDirectoryContents.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/267574cbd40a48fea0f0aaab52827f5b5550/f4/e6d1a69c/IFileInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2fe487e0e058409fa8bc9d5eef045e0920c00/7b/d0d50186/NbtFile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/936ed591523a4402b2b99e8f8d5602d223b000/48/2a6549b5/CacheMode.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/936ed591523a4402b2b99e8f8d5602d223b000/65/4a36cb84/Visual.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/936ed591523a4402b2b99e8f8d5602d223b000/6f/e2c1ad98/StyledElement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df3ec6a917c4437e8596e8e599b2ca41146e00/26/9adbaa1a/UserControl.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df3ec6a917c4437e8596e8e599b2ca41146e00/91/34dd35d4/ContentControl.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0fdcf16c4f8f2c6aded9c8ef5ded2c33aedf4e0/MenuItemStyles.axaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/149eee9bc66c229bc4835b92862e77d859e1b490998ecbcebe172ca64a7be8/FAFrame.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/64a6b3d23fbd5626d358dc2149b7af4689df10c411865650bf6ed161559fcf/IObserver.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bde3c9f40ed355362e1594bf8283e3d8c71286b27f86a97cb80c8b37a3ea9/IObservable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d9ba81cba1df78c1741be8e11c337f656de6ce74f5eb51b16bb3ff151adbd73/FAPageStackEntry.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/8E66C1723FA13D46A2D590C2/CommunityToolkit.Mvvm.SourceGenerators/CommunityToolkit.Mvvm.SourceGenerators.ObservablePropertyGenerator/AvaloniaApplication1.ViewModels.PlayViewModel.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/28f4d65386f3542854c4276c5a7cb327f7bcf04dc46482827390b07ca340bb1c/FExpansion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AvaloniaApplication1/DataType/Data.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AvaloniaApplication1/DataType/VersionProfile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AvaloniaApplication1/ViewModels/NBTUserControlStaticState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AvaloniaApplication1/ViewModels/NbtSetValueDialogueViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AvaloniaApplication1/ViewModels/NbtTagRepresenter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AvaloniaApplication1/ViewModels/NbtTreePresenterViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AvaloniaApplication1/ViewModels/VersionSelectionViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AvaloniaApplication1/Views/NBTWindow.axaml" root0="FORCE_HIGHLIGHTING" />
@@ -70,8 +59,8 @@
     <setting file="file://$PROJECT_DIR$/AvaloniaApplication1/Views/Play.axaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AvaloniaApplication1/Views/Play.axaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Immediate Window" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="Toolset" />
   </component>
@@ -99,6 +88,7 @@
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -203,6 +193,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

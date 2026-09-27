@@ -59,7 +59,7 @@ public partial class App : Application
             
         }
         #endregion
-        
+        //TODO OnClose
         sCollection.AddTransient<MainWindowViewModel>();
 
         

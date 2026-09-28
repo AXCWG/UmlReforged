@@ -29,32 +29,24 @@ public partial class App : Application
     {
         var sCollection = new ServiceCollection();
         #region HandleAppData
-
         if (!File.Exists("config.json"))
         {
-            var appdata = new ApplicationData
-            {
-                Folders = [],
-                StoredNames = []
-            };
+            var appdata = new ApplicationData([], [], 0, false);
+            File.WriteAllText("config.json", JsonSerializer.Serialize(appdata, AppJsonSerializer.Default.ApplicationDataDataObject));
             sCollection.AddSingleton(appdata);
         }
         else
         {
             try
             {
-                var appdata = JsonSerializer.Deserialize<ApplicationData>(File.ReadAllText("config.json"),
-                    AppJsonSerializer.Default.ApplicationData) ?? throw new NullReferenceException();
-                sCollection.AddSingleton(appdata);
+                var appdata = JsonSerializer.Deserialize(File.ReadAllText("config.json"),
+                    AppJsonSerializer.Default.ApplicationDataDataObject) ?? throw new NullReferenceException();
+                sCollection.AddSingleton(new ApplicationData(appdata.Folders ?? [], appdata.StoredNames ?? [], appdata.SelectedIndex?? 0, appdata.IsOnline ?? false));
             }
             catch (Exception)
             {
                 File.Delete("config.json");
-                sCollection.AddSingleton( new ApplicationData
-                {
-                    Folders = [],
-                    StoredNames = []
-                });
+                sCollection.AddSingleton( new ApplicationData([], [], 0, false));
             }
             
         }

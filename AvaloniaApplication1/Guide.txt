@@ -1,0 +1,10 @@
+2026.9.29 Can't believe with this small repository I have to write anything like this. 
+
+Implementation flow. 
+
+- Adding new property into ApplicationData type and its DTO: ApplicationDataDataType. 
+    1. Add property in ApplicationData and modify ctor. 
+    2. Add property in ApplicationDataDataType and modify ctor. 
+    3. Modify the implicit converter. 
+    4. Modify service creation (especially the whole procedure for reading from config)
+    5. Manage MVVM dependency. Good luck on that. 

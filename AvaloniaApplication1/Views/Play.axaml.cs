@@ -1,10 +1,12 @@
 using System;
+using System.Linq;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using AvaloniaApplication1.ViewModels;
+using AXExpansion;
 using FluentAvalonia.UI.Controls;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -34,8 +36,16 @@ public partial class Play : UserControl
     {
         if (e.Key == Key.Enter)
         {
-            ((PlayViewModel)DataContext).Username.Usernames.Add(((ComboBox?)sender)?.Text??throw new NullReferenceException());
-            ((ComboBox)sender).SelectedIndex = ((PlayViewModel)DataContext).Username.Usernames.Count - 1;
+            var playViewModel = ((PlayViewModel)DataContext);
+            if (playViewModel?.Username.Usernames.FirstOrDefault(i => i == ((ComboBox?)sender)?.Text) is {} i)
+            {
+                ((ComboBox)sender).SelectedIndex = playViewModel?.Username.Usernames.IndexOf(i) ?? throw new InvalidOperationException();
+                TopLevel.GetTopLevel(this).FocusManager.Focus(null);
+
+                return; 
+            }
+            playViewModel.Username.Usernames.Add(((ComboBox?)sender)?.Text??throw new NullReferenceException());
+            ((ComboBox)sender).SelectedIndex = playViewModel.Username.Usernames.Count - 1;
             TopLevel.GetTopLevel(this).FocusManager.Focus(null);
         }
     }

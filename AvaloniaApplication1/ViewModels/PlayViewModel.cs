@@ -11,32 +11,42 @@ namespace AvaloniaApplication1.ViewModels;
 
 public partial class PlayViewModel : ViewModelBase
 {
+    private readonly ApplicationData _data;
+
     /// <inheritdoc/>
     public PlayViewModel(ApplicationData data)
     {
-        Username = new()
-        {
-            Usernames = new ObservableCollection<string>(data.StoredNames),
-            Index = 0
-        };
-        Username.PropertyChanged += (sender, args) =>
-        {
-            OnPropertyChanged(nameof(Username));
-        };
+        _data = data;
+        Username = new(data.StoredNames, data.SelectedIndex, data);
+        IsOnline = data.IsOnline;
     }
 
     [ObservableProperty] public partial bool IsOnline { get; set; }
-    [ObservableProperty] public partial UsernameAndIndex Username { get; private set; } 
+    public UsernameAndIndex Username { get;  }
+
     partial void OnIsOnlineChanged(bool value)
     {
-        Console.WriteLine($"IsOffline: {value}");
+        _data.IsOnline = value;
     }
-    
 }
 
-public  sealed partial class UsernameAndIndex  : ObservableObject
+public  sealed partial class UsernameAndIndex : ObservableObject
 {
-    public  ObservableCollection<string> Usernames { get; set; } = [];
+    private readonly ApplicationData? _data;
+    // nullable parameter for NOT THE SAME REASON. 
+    public UsernameAndIndex(ObservableCollection<string>  usernames , int index , ApplicationData? data = null)
+    {
+        _data = data;
+        Usernames = usernames;
+        Index = index;
+    }
+    public ObservableCollection<string> Usernames { get; private set; }
     [ObservableProperty]
-    public partial int Index { get; set; }
+    public partial int Index { get;  set; }
+
+    partial void OnIndexChanged(int value)
+    {
+        _data?.SelectedIndex = value;
+        Console.WriteLine(value);
+    }
 }
